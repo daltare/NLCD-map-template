@@ -19,7 +19,8 @@ conflicts_prefer(dplyr::filter)
 
 # CA boundary -------------------------------------------------------------
 ## get CA boundary ----
-ca_boundary <- states(year = 2020, cb = TRUE) %>% 
+ca_boundary <- states(year = 2020, 
+                      cb = TRUE) %>% # use cb = TRUE to get the cartographic boundary file
     filter(STUSPS == 'CA') %>%
     st_transform(3310)
 
