@@ -19,7 +19,7 @@ conflicts_prefer(dplyr::filter)
 
 # CA boundary -------------------------------------------------------------
 ## get CA boundary ----
-ca_boundary <- states(year = 2020) %>% 
+ca_boundary <- states(year = 2020, cb = TRUE) %>% 
     filter(STUSPS == 'CA') %>%
     st_transform(3310)
 
