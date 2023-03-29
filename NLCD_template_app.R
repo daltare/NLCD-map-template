@@ -54,7 +54,8 @@ ca_boundary <- st_read(here('data_processed',
 
 ## NLCD ----
 nlcd_legend <- nlcd_colors() %>% 
-    filter(!str_detect(string = Description, pattern = 'Alaska only')) %>% 
+    filter(!str_detect(string = Description, 
+                       pattern = 'Alaska only')) %>% 
     select(Class, Color)
 
 
